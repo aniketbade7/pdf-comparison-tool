@@ -1,0 +1,170 @@
+/* styles.css */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --dark-text: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+}
+
+.comparison-section, .enhancer-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.pdf-upload-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.pdf-upload-box {
+    border: 2px dashed var(--secondary-color);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.pdf-upload-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(52,152,219,0.2);
+}
+
+.upload-btn {
+    background: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #2980b9;
+}
+
+.file-info {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.results-box {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.download-btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #c0392b;
+}
+
+.image-comparison {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#beforeImage, #afterImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#afterImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(0 0 0 50%);
+}
+
+#slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    background: transparent;
+    z-index: 10;
+}
+
+#slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 3px;
+    height: 100%;
+    background: white;
+    cursor: col-resize;
+}
+
+.enhance-controls {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.sliders {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .pdf-upload-container {
+        grid-template-columns: 1fr;
+    }
+}

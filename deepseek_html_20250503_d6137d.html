@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Size Optimizer Pro - Compare & Enhance Documents</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-file-pdf"></i> PDF Size Optimizer Pro</h1>
+        
+        <!-- PDF Comparison Section -->
+        <div class="comparison-section">
+            <h2>PDF Size Comparison</h2>
+            <div class="pdf-upload-container">
+                <div class="pdf-upload-box">
+                    <input type="file" id="beforePdf" accept=".pdf" class="hidden">
+                    <label for="beforePdf" class="upload-btn">
+                        <i class="fas fa-upload"></i> Upload Original PDF
+                    </label>
+                    <div class="file-info" id="beforeInfo"></div>
+                </div>
+                
+                <div class="pdf-upload-box">
+                    <input type="file" id="afterPdf" accept=".pdf" class="hidden">
+                    <label for="afterPdf" class="upload-btn">
+                        <i class="fas fa-upload"></i> Upload Optimized PDF
+                    </label>
+                    <div class="file-info" id="afterInfo"></div>
+                </div>
+            </div>
+            
+            <div class="results-box">
+                <h3>Comparison Results</h3>
+                <div id="resultsContent">
+                    <p>Original Size: <span id="originalSize">0 MB</span></p>
+                    <p>Optimized Size: <span id="optimizedSize">0 MB</span></p>
+                    <p>Reduction: <span id="reduction">0%</span></p>
+                </div>
+                <button class="download-btn" id="downloadReport">
+                    <i class="fas fa-download"></i> Download Report
+                </button>
+            </div>
+        </div>
+
+        <!-- Image Enhancer Section -->
+        <div class="enhancer-section">
+            <h2>Image Quality Enhancer</h2>
+            <div class="image-comparison">
+                <div class="image-container">
+                    <img src="placeholder.jpg" id="beforeImage" alt="Original Image">
+                    <img src="placeholder.jpg" id="afterImage" alt="Enhanced Image">
+                    <input type="range" id="slider" min="0" max="100" value="50">
+                </div>
+                <div class="enhance-controls">
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <div class="sliders">
+                        <label>Brightness: <input type="range" id="brightness" min="0" max="200" value="100"></label>
+                        <label>Contrast: <input type="range" id="contrast" min="0" max="200" value="100"></label>
+                        <label>Saturation: <input type="range" id="saturation" min="0" max="200" value="100"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
